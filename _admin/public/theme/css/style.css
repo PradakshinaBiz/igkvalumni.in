@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+
+html
+{
+  height: 100%;
+}
+
+body
+{
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+#header
+{
+  background-color: #0E4982;
+}
+
+#header_bottom
+{
+  background: #49c32c;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 30px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: 'Gotu', sans-serif;
+}
+
+
+nav
+{
+  background-color: #0E4982;
+}
+
+.navbar-toggler
+{
+  background: #49c32c;
+  color: #FFFFFF;
+}
+
+.navbar-toggler-icon
+{
+  color: #FFFFFF;
+}
+
+.nav-link, .nav-link:hover
+{
+  color: #ffffff;
+}
+
+#container
+{
+  min-height: 100%;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+#footerTop
+{
+  height: 150px;
+  background-color: #0E4982;
+}
+
+#footerBottom
+{
+  height: 50px;
+  background: #000000;
+}
+
+label
+{
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.mb
+{
+  margin-bottom: 10px;
+}

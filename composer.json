@@ -1,0 +1,6 @@
+{
+    "require": {
+        "codeigniter4/framework": "^4.2",
+        "tecnickcom/tcpdf": "^6.4"
+    }
+}
