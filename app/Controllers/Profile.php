@@ -44,6 +44,8 @@ class Profile extends BaseController
             "add_4" => $this->request->getVar("add_4"),
 
             "highest_qualification" => $this->request->getVar('highest_qualification'),
+            "degree" => $this->request->getVar('degree'),
+            "subject" => $this->request->getVar('subject'),
             "passout_year" => $this->request->getVar('passout_year'),
 
             "university" => $this->request->getVar('university'),

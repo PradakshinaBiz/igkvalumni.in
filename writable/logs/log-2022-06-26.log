@@ -1,0 +1,17 @@
+CRITICAL - 2022-06-26 12:23:47 --> Invalid argument supplied for foreach()
+in APPPATH\Views\pages\user\report.php on line 32.
+ 1 APPPATH\Views\pages\user\report.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\pages\\user\\report.php', 32, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\pages\\user\\report.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('pages/user/report', [], true)
+ 5 APPPATH\Controllers\User.php(342): view('pages/user/report', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\User->report()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-26 12:24:50 --> Call to a member function where() on null
+in APPPATH\Controllers\User.php on line 342.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\User->report()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

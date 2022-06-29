@@ -98,18 +98,34 @@
                     </div>
                     <div class="col-md-2">
                         <div class="form-group mb">
+                            <label>Subject</label>
+                            <select class="form-select" name="subject">
+                                <option value="0">Select</option>
+                                <?php
+                                    foreach(SUBJECT as $k => $v)
+                                    {
+                                      ?>
+                                <option value="<?= $k ?>" <?=($user['subject'] == $k) ? "selected" : "" ?>><?= $v ?></option>
+                                <?php
+                                    }
+
+                                    ?>
+                                <option value="-1" <?=($user['subject']=="-1") ? "selected" : "" ?>>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group mb">
                             <label>Passout Year</label>
                             <select class="form-select" name="passout_year">
                                 <option value="0">Select</option>
                                 <?php
-                                    for ($x = 2000; $x <= 2023; $x++) {
-                                        ?>
-                                <option value="<?= $x ?>" <?=($user['passout_year']==$x) ? "selected" : "" ?> >
-                                    <?= $x ?>
-                                </option>
+                                    foreach(_YEAR_ as $k => $v)
+                                    {
+                                      ?>
+                                <option value="<?= $k ?>" <?=($user['passout_year'] == $k) ? "selected" : "" ?>><?= $v ?></option>
                                 <?php
                                     }
-
 
                                     ?>
                             </select>
@@ -123,8 +139,7 @@
                                 <?php
                                     foreach ($instituteList as $institute) {
                                         ?>
-                                <option <?=($user['institute']==$institute['id']) ? "selected" : "" ?> value="
-                                    <?= $institute['id'] ?>">
+                                <option <?=($user['institute']==$institute['id']) ? "selected" : "" ?> value="<?= $institute['id'] ?>">
                                     <?= $institute['title'] ?>
                                 </option>
                                 <?php
@@ -147,8 +162,7 @@
                                 <?php
                                     foreach ($universityList as $university) {
                                         ?>
-                                <option <?=($user['university']==$university['id']) ? "selected" : "" ?> value="
-                                    <?= $university['id'] ?>">
+                                <option <?=($user['university']==$university['id']) ? "selected" : "" ?> value="<?= $university['id'] ?>">
                                     <?= $university['title'] ?>
                                 </option>
                                 <?php
@@ -160,6 +174,24 @@
                             </select>
                             <input name="university_other" placeholder="University" type="<?= ($user['university'] == "-1")?"text":"hidden" ?>" class="form-control mb"
                                 value="<?= $user['university_other'] ?>" id="universityOther"/>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group mb">
+                            <label>Degree</label>
+                            <select class="form-select" name="fellowship">
+                                <option value="0">Select</option>
+                                <?php
+                                    foreach(DEGREE as $k => $v)
+                                    {
+                                      ?>
+                                <option value="<?= $k ?>" <?=($user['degree'] == $k) ? "selected" : "" ?>><?= $v ?></option>
+                                <?php
+                                    }
+
+                                    ?>
+                                <option value="-1" <?=($user['degree']=="-1") ? "selected" : "" ?>>Other</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -207,6 +239,7 @@
 
 
                                     ?>
+                                    <option <?=($user['e_state']=="-1") ? "selected" : "" ?> value="-1">Other</option>
                             </select>
                         </div>
                     </div>
@@ -214,6 +247,7 @@
                         <div class="form-group mb">
                             <label>Country</label>
                             <select class="form-select" name="e_country">
+                                <option value="0">Select</option>
                                 <?php
                                     foreach ($countryList as $country) {
                                         ?>
@@ -334,16 +368,16 @@
                     </div>
                     <div class="col-md-3">
                         <div class="form-group mb">
-                            <label>Mobile No ( With country code )</label>
+                            <label>Mobile No. ( With country code )</label>
                             <input value="<?= $user['c_mobile_no'] ?>" name="c_mobile_no" type="text" class="form-control"
-                                placeholder="Mobile NO">
+                                placeholder="Mobile No.">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group mb">
-                            <label>Brief details ( Maximum 300 character )</label>
+                            <label>Brief detail ( Maximum 1000 characters )</label>
                             <textarea name="brief_details" class="form-control" rows="3"
-                                placeholder="Brief details"><?= $user['brief_details'] ?></textarea>
+                                placeholder="Brief detail"><?= $user['brief_details'] ?></textarea>
                         </div>
                     </div>
                 </div>

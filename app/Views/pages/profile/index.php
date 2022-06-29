@@ -83,16 +83,32 @@
                             <select class="form-select" name="highest_qualification">
                                 <option value="0">Select</option>
                                 <?php
+                                    foreach(QUALIFICATION as $k => $v)
+                                    {
+                                      ?>
+                                <option value="<?= $k ?>" <?=($user['highest_qualification'] == $k) ? "selected" : "" ?>><?= $v ?></option>
+                                <?php
+                                    }
 
-                                foreach(QUALIFICATION as $k => $v)
-                                {
-                                  ?>
-                                    <option value="<?= $k ?>" <?=($user['highest_qualification'] == $k) ? "selected" : "" ?>><?= $v ?></option>
+                                    ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group mb">
+                            <label>Subject</label>
+                            <select class="form-select" name="subject">
+                                <option value="0">Select</option>
+                                <?php
+                                    foreach(SUBJECT as $k => $v)
+                                    {
+                                      ?>
+                                <option value="<?= $k ?>" <?=($user['subject'] == $k) ? "selected" : "" ?>><?= $v ?></option>
+                                <?php
+                                    }
 
-                                  <?php
-                                }
-
-                                ?>
+                                    ?>
+                                <option value="-1" <?=($user['subject']=="-1") ? "selected" : "" ?>>Other</option>
                             </select>
                         </div>
                     </div>
@@ -102,14 +118,12 @@
                             <select class="form-select" name="passout_year">
                                 <option value="0">Select</option>
                                 <?php
-                                    for ($x = 2000; $x <= 2023; $x++) {
-                                        ?>
-                                <option value="<?= $x ?>" <?=($user['passout_year']==$x) ? "selected" : "" ?> >
-                                    <?= $x ?>
-                                </option>
+                                    foreach(_YEAR_ as $k => $v)
+                                    {
+                                      ?>
+                                <option value="<?= $k ?>" <?=($user['passout_year'] == $k) ? "selected" : "" ?>><?= $v ?></option>
                                 <?php
                                     }
-
 
                                     ?>
                             </select>
@@ -123,8 +137,7 @@
                                 <?php
                                     foreach ($instituteList as $institute) {
                                         ?>
-                                <option <?=($user['institute']==$institute['id']) ? "selected" : "" ?> value="
-                                    <?= $institute['id'] ?>">
+                                <option <?=($user['institute']==$institute['id']) ? "selected" : "" ?> value="<?= $institute['id'] ?>">
                                     <?= $institute['title'] ?>
                                 </option>
                                 <?php
@@ -138,7 +151,6 @@
                                 value="<?= $user['institute_other'] ?>" id="instituteOther"/>
                         </div>
                     </div>
-
                     <div class="col-md-3">
                         <div class="form-group mb">
                             <label>University</label>
@@ -147,10 +159,7 @@
                                 <?php
                                     foreach ($universityList as $university) {
                                         ?>
-                                <option <?=($user['university']==$university['id']) ? "selected" : "" ?> value="
-                                    <?= $university['id'] ?>">
-                                    <?= $university['title'] ?>
-                                </option>
+                                <option <?=($user['university']==$university['id']) ? "selected" : "" ?> value="<?= $university['id'] ?>"><?= $university['title'] ?></option>
                                 <?php
                                     }
 
@@ -158,27 +167,41 @@
                                     ?>
                                 <option value="-1" <?=($user['university']=="-1") ? "selected" : "" ?>>Other</option>
                             </select>
-                            <input name="university_other" placeholder="University" type="<?= ($user['university'] == "-1")?"text":"hidden" ?>" class="form-control mb"
-                                value="<?= $user['university_other'] ?>" id="universityOther"/>
+                            <input name="university_other" placeholder="University" type="<?= ($user['university'] == "-1")?"text":"hidden" ?>" class="form-control mb" value="<?= $user['university_other'] ?>" id="universityOther"/>
                         </div>
                     </div>
+                    <div class="col-md-2">
+                        <div class="form-group mb">
+                            <label>Degree</label>
+                            <select class="form-select" name="degree">
+                                <option value="0">Select</option>
+                                <?php
+                                    foreach(DEGREE as $k => $v)
+                                    {
+                                      ?>
+                                <option value="<?= $k ?>" <?=($user['degree'] == $k) ? "selected" : "" ?>><?= $v ?></option>
+                                <?php
+                                    }
 
+                                    ?>
+                                <option value="-1" <?=($user['degree']=="-1") ? "selected" : "" ?>>Other</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="col-md-2">
                         <div class="form-group mb">
                             <label>Fellowship</label>
                             <select class="form-select" name="fellowship">
                                 <option value="0">Select</option>
                                 <?php
+                                    foreach(FELLOWSHIP as $k => $v)
+                                    {
+                                      ?>
+                                <option value="<?= $k ?>" <?=($user['fellowship'] == $k) ? "selected" : "" ?>><?= $v ?></option>
+                                <?php
+                                    }
 
-                                foreach(FELLOWSHIP as $k => $v)
-                                {
-                                  ?>
-                                    <option value="<?= $k ?>" <?=($user['fellowship'] == $k) ? "selected" : "" ?>><?= $v ?></option>
-
-                                  <?php
-                                }
-
-                                ?>
+                                    ?>
                                 <option value="-1" <?=($user['fellowship']=="-1") ? "selected" : "" ?>>Other</option>
                             </select>
                         </div>
@@ -207,7 +230,7 @@
 
 
                                     ?>
-                                    <option <?=($user['e_state']=="-1") ? "selected" : "" ?> value="-1">
+                                <option <?=($user['e_state']=="-1") ? "selected" : "" ?> value="-1">
                                     Other
                                 </option>
                             </select>
@@ -217,6 +240,7 @@
                         <div class="form-group mb">
                             <label>Country</label>
                             <select class="form-select" name="e_country">
+                              <option value="0">Select</option>
                                 <?php
                                     foreach ($countryList as $country) {
                                         ?>
@@ -249,17 +273,14 @@
                             <select class="form-select" name="employment_status">
                                 <option value="0">Select</option>
                                 <?php
-
-                                foreach(EMPLOYMENT_STATUS as $k => $v)
-                                {
-                                ?>
-
+                                    foreach(EMPLOYMENT_STATUS as $k => $v)
+                                    {
+                                    ?>
                                 <option value="<?= $k ?>" <?=($user['employment_status']==$k) ? "selected" : "" ?> ><?= $v ?></option>
-
                                 <?php
-                                }
+                                    }
 
-                                ?>
+                                    ?>
                                 <option value="-1" <?=($user['employment_status']=="-1") ? "selected" : "" ?> >Other</option>
                             </select>
                         </div>
@@ -275,11 +296,15 @@
                             <label>Department</label>
                             <select class="form-select" name="department">
                                 <option value="0">Select</option>
-                                <option value="1" <?=($user['department']=="1") ? "selected" : "" ?> >Administration</option>
-                                <option value="2" <?=($user['department']=="2") ? "selected" : "" ?> >Marketing</option>
-                                <option value="3" <?=($user['department']=="3") ? "selected" : "" ?> >Finance</option>
-                                <option value="4" <?=($user['department']=="4") ? "selected" : "" ?> >Teaching</option>
-                                <option value="5" <?=($user['department']=="5") ? "selected" : "" ?> >Research</option>
+                                <?php
+                                    foreach(DEPARTMENT as $k => $v)
+                                    {
+                                    ?>
+                                <option value="<?= $k ?>" <?=($user['department']==$k) ? "selected" : "" ?> ><?= $v ?></option>
+                                <?php
+                                    }
+
+                                    ?>
                                 <option value="-1" <?=($user['department']=="-1") ? "selected" : "" ?> >Other</option>
                             </select>
                         </div>
@@ -318,8 +343,7 @@
                                 <?php
                                     foreach ($stateList as $state) {
                                         ?>
-                                <option <?=($user['c_state']==$state['id']) ? "selected" : "" ?> value="
-                                    <?= $state['id'] ?>">
+                                <option <?=($user['c_state']==$state['id']) ? "selected" : "" ?> value="<?= $state['id'] ?>">
                                     <?= $state['title'] ?>
                                 </option>
                                 <?php
@@ -337,71 +361,64 @@
                     </div>
                     <div class="col-md-3">
                         <div class="form-group mb">
-                            <label>Mobile No ( With country code )</label>
+                            <label>Mobile No. ( With country code )</label>
                             <input value="<?= $user['c_mobile_no'] ?>" name="c_mobile_no" type="text" class="form-control"
-                                placeholder="Mobile NO">
+                                placeholder="Mobile No.">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group mb">
-                            <label>Brief details ( Maximum 1000 character )</label>
+                            <label>Brief detail ( Maximum 1000 characters )</label>
                             <textarea name="brief_details" class="form-control" rows="3"
-                                placeholder="Brief details"><?= $user['brief_details'] ?></textarea>
+                                placeholder="Brief detail"><?= $user['brief_details'] ?></textarea>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="card mb">
-        <div class="card-body">
-
-          <div class="row">
-
-            <div class="col-md-3">
-              <div class="form-group mb">
-                  <img src="<?= $user["profile_image"] ?>" width="100" height="100" />
-              </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group mb">
+                            <img src="<?= $user["profile_image"] ?>" width="100" height="100" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group mb">
+                            <label>Upload your latest photograph</label>
+                            <input class="form-control" type="file" name="profile_image" accept="image/jpeg"/>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-              <div class="form-group mb">
-                  <label>Upload your latest photograph</label>
-                  <input class="form-control" type="file" name="profile_image" accept="image/jpeg"/>
-              </div>
-            </div>
-
-          </div>
-</div>
         </div>
-
-
         <input type="submit" name="submit" value="Update" class="btn btn-primary" />
     </form>
 </div>
-
 <script type="text/javascript">
+    function instituteToggle(i)
+    {
+      if(i == -1)
+      {
+        document.getElementById("instituteOther").type = "text";
+      }
+      else
+      {
+        document.getElementById("instituteOther").type = "hidden";
+      }
+    }
 
-function instituteToggle(i)
-{
-  if(i == -1)
-  {
-    document.getElementById("instituteOther").type = "text";
-  }
-  else
-  {
-    document.getElementById("instituteOther").type = "hidden";
-  }
-}
-
-function universityToggle(i)
-{
-  if(i == -1)
-  {
-    document.getElementById("universityOther").type = "text";
-  }
-  else
-  {
-    document.getElementById("universityOther").type = "hidden";
-  }
-}
+    function universityToggle(i)
+    {
+      if(i == -1)
+      {
+        document.getElementById("universityOther").type = "text";
+      }
+      else
+      {
+        document.getElementById("universityOther").type = "hidden";
+      }
+    }
 
 </script>

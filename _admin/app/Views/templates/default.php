@@ -14,7 +14,7 @@
     </head>
     <body>
         <header id="header " class="fixed-top">
-            <nav class="navbar navbar-expand-lg navbar-light ">
+            <nav class="navbar navbar-expand-lg navbar-light " id="main_menu">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="<?= base_url() ?>">
                     <img src="<?= base_url("public/images/logo.png") ?>" alt="" width="275" >
@@ -29,6 +29,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="https://deancoaryp.in/">Home</a>
                             </li>
+                            <li class="nav-item">
+                                                            <a class="nav-link" href="https://deancoaryp.in/academic">Academic</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" href="https://deancoaryp.in/administrative">Administrative</a>
+                                                        </li>
 
 
 
@@ -56,7 +62,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="<?= base_url("user") ?>">Student Master</a></li>
-            <li><a class="dropdown-item" href="#">Report</a></li>
+            <li><a class="dropdown-item" href="<?= base_url("user/report") ?>">Report</a></li>
 
           </ul>
         </li>
@@ -84,7 +90,9 @@ if (session()->get('logged_in'))
 }
 
 ?>
-
+<li class="nav-item">
+                               <a class="nav-link" href="https://deancoaryp.in/contact">Contact</a>
+                           </li>
                         </ul>
                     </div>
                 </div>

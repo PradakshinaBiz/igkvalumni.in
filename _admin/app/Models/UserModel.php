@@ -30,6 +30,8 @@ class UserModel extends Model
       'status',
 
       'highest_qualification',
+      'degree',
+      'subject',
       'passout_year',
       'university',
       'university_other',
@@ -56,6 +58,7 @@ class UserModel extends Model
       'brief_details',
       'created_by',
       'created_at',
+      'updated_at'
     ];
 
     // Dates

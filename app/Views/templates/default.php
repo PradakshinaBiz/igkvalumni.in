@@ -9,7 +9,9 @@
         <script src="https://kit.fontawesome.com/db151b1a57.js" crossorigin="anonymous"></script>
         <link href="<?= base_url("public/theme/css/style.css") ?>" type="text/css" rel="stylesheet"/>
         <meta name="google-site-verification" content="JY-4eCKI_UKjtUl5hUHSPDwtqxEkHFDB69cNRNQILgw" />
-        <script id="google_gtagjs" src="https://www.googletagmanager.com/gtag/js?id=G-VQMZVC8EJQ" async></script>
+        <meta name="author" content="Pradakshina Consulting Private Limited"/>
+        <meta name="revisit-after" content="1 days"/>
+
     </head>
     <body>
         <header id="header " class="fixed-top">
@@ -28,6 +30,13 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= base_url() ?>">Home</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= base_url("academic") ?>">Academic</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= base_url("administrative") ?>">Administrative</a>
+                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="https://admin.deancoaryp.in/">Admin</a>
                             </li>
@@ -62,7 +71,9 @@
 
                             ?>
 
-
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?= base_url("contact") ?>">Contact</a>
+                            </li>
 
                         </ul>
                     </div>
@@ -83,5 +94,15 @@ Dean Faculty, College of Agriculture, Raipur (C.G.)
             <section id="footerBottom"></section>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-231942877-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-231942877-1');
+  </script>
+
     </body>
 </html>

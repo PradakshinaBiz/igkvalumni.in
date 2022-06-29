@@ -99,6 +99,72 @@ define('EVENT_PRIORITY_HIGH', 10);
 /*----------------------------------------------------------------------------*/
 
 define('STORE_URL', 'https://store.deancoaryp.in/');
-define('QUALIFICATION',['1'=>'UG','2'=>'PG','3'=>'PHD']);
-define('FELLOWSHIP',['1'=>'ICAR - JRF','2'=>'ICAR SRF','3'=>'ICAR IF']);
+define('QUALIFICATION',['1'=>'UG','2'=>'PG','3'=>'Ph. D.']);
+define('DEGREE',[
+  '1'=>'M.Sc.',
+  '2'=>'M.Sc.(Ag.)',
+  '3'=>'M.Sc.(Hort.)',
+  '4'=>'MBA(ABM)',
+  '5'=>'Ph.D',
+  '6'=>'Ph.D in Agriculture',
+  '7'=>'Ph.D in Horticulture'
+]);
+
+define('SUBJECT',[
+  '1'=>'Agri business and Rural Management',
+  '2'=>'Agricultural Economics',
+  '3'=>'Agricultural Extension',
+  '4'=>'Agricultural Microbiology',
+  '5'=>'Agricultural Statistics',
+  '6'=>'Agrometeorology',
+  '7'=>'Agronomy',
+  '8'=>'Entomology',
+  '9'=>'Floriculture and Landscape',
+  '10'=>'Forestry',
+  '11'=>'Fruit Science',
+  '12'=>'Genetics and Plant Breeding',
+  '13'=>'Plant Molecular Biology and Biotechnology',
+  '14'=>'Plant Pathology',
+  '15'=>'Plant Physiology',
+  '16'=>'Soil Science and Agricultural Chemistry',
+  '17'=>'Vegetable Science'
+]);
+
+define('FELLOWSHIP',['1'=>'ICAR - JRF','2'=>'ICAR - SRF','3'=>'ICAR - IF (International)']);
 define('EMPLOYMENT_STATUS',['1'=>'Entrepreneur','2'=>'Service - Govt','3'=>'Service - Pvt','4'=>'Farmer','5'=>'Student']);
+define('DEPARTMENT',[
+  '1'=>'Administration',
+  '2'=>'Marketing',
+  '3'=>'Finance',
+  '4'=>'Teaching',
+  '5'=>'Research'
+]);
+
+
+define('_YEAR_',[
+  '2000'=>'2000 - 01',
+  '2001'=>'2001 - 02',
+  '2002'=>'2002 - 03',
+  '2003'=>'2003 - 04',
+  '2004'=>'2004 - 05',
+  '2005'=>'2005 - 06',
+  '2006'=>'2006 - 07',
+  '2007'=>'2007 - 08',
+  '2008'=>'2008 - 09',
+  '2009'=>'2009 - 10',
+  '2010'=>'2010 - 11',
+  '2011'=>'2011 - 12',
+  '2012'=>'2012 - 13',
+  '2013'=>'2013 - 14',
+  '2014'=>'2014 - 15',
+  '2015'=>'2015 - 16',
+  '2016'=>'2016 - 17',
+  '2017'=>'2017 - 18',
+  '2018'=>'2018 - 19',
+  '2019'=>'2019 - 20',
+  '2020'=>'2020 - 21',
+  '2021'=>'2021 - 22',
+  '2022'=>'2022 - 23',
+  '2023'=>'2023 - 24'
+
+]);

@@ -29,7 +29,7 @@ body
 }
 
 
-nav
+#main_menu
 {
   background-color: #0E4982;
 }
@@ -79,4 +79,39 @@ label
 .mb
 {
   margin-bottom: 10px;
+}
+
+
+.pagination
+{
+  background-color: #FFFFFF;
+}
+
+.pagination > li
+{
+  margin-left: 1px;
+  background-color: #0E4982;
+
+}
+
+.pagination > li:first-child
+{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.pagination > li:last-child
+{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px; 
+}
+
+.pagination > li > a
+{
+  display: block;
+  height: 35px;
+  padding: 5px;
+
+  text-decoration: none;
+  color: #FFFFFF;
 }

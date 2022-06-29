@@ -37,6 +37,10 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->match(['get', 'post'], '/administrative', 'Home::administrative');
+$routes->match(['get', 'post'], '/academic', 'Home::academic');
+$routes->match(['get', 'post'], '/contact', 'Home::contact');
+
 $routes->get('/robots.txt', 'SEO::robots');
 $routes->get('/sitemap.xml', 'SEO::sitemap');
 
